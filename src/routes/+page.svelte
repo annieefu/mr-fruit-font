@@ -71,7 +71,7 @@
   position: relative;
   height: 250px;
   width: 90%;
-  max-width: 600px;
+  max-width: 870px;
 }
 
 .sandbox{
@@ -139,7 +139,7 @@ p{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 90px;
+  font-size: 95px;
   text-align: center;
   white-space: nowrap;
   position: absolute;
