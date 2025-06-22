@@ -18,7 +18,7 @@
   </p>
 
   <p>Everything about these stores has become familiar, and in a sense, comforting. I've shopped in them after insane days at work and after going out,
-    after long runs and in cooking emergencies. Over time, it became impossible to notice and appreciate the unique handwritten signage all around the store:</p>
+    after long runs and in cooking emergencies. Over time, it became impossible to not notice and appreciate the unique handwritten signage all around the store:</p>
 <img src="/imgs/banner.png"/>
 
 
