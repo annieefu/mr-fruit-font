@@ -1,12 +1,45 @@
+<script>
+	import Sandbox from "$components/Sandbox.svelte";
+</script>
+
+
 <div class="header">
   <span class="top">The</span>
   <span class="middle">Mr. Fruit</span>
   <span class="bottom">Font</span>
 </div>
 
+
 <div class="content">
-<p>The Mr. Fruit Font is an homage to the handwritten produce signs that populate the storefronts of Mr. Fruit bodegas across Brooklyn (Mr. Kiwi, Mr. Kale, Mr. Lemon, Mr. Mango, & more).
-</p>
+<p>The Mr. Fruit Font is an homage to the handwritten produce signs that populate several of the bodegas within the
+	Mr. Fruit chain across Brooklyn (Mr. Kiwi, Mr. Kale, Mr. Lemon, Mr. Mango, & more).</p><p>
+  When I moved to Brooklyn after college in 2021, Mr. Kiwi was the first grocery store I visited during my first night in the city.
+  In every apartment I've lived in since, I've had a Mr. Fruit bodega within a 5-minute walk, and have continued to shop each one on a near-daily basis.
+  </p>
+
+  <p>Everything about these stores has become familiar, and in a sense, comforting. I've shopped in them after insane days at work and after going out,
+    after long runs and in cooking emergencies. Over time, it became impossible to notice the handwritten signage all around the store:</p>
+<img src="/imgs/banner.png"/>
+
+
+  <p>This project hopes to capture the mundane gorgeousness of these signs in a typeface. I hope you enjoy!
+
+  </p>
+  <span class="content-3">- Annie</span><br/><br/>
+  <p class="sub">
+	In addition to this font, the chain has also inspired <a href="https://hellgatenyc.com/mr-marathon-tribute-to-cheap-produce/">a marathon</a>
+	and received copious press coverage (<a href="https://www.nytimes.com/2023/10/04/nyregion/mr-fruit-bodega-brooklyn.html">Hellgate</a>,
+	<a href="https://www.grubstreet.com/article/brooklyn-fruit-bodegas-mr-lemon-mr-kiwi.html">Grub Street</a>,
+	<a href="https://www.wnyc.org/story/mr-fruit-beloved-bodegas-of-brooklyn/">WNYC</a>).
+</p><br/><br/>
+
+<div class="sandbox">
+<span class="content-2">Try out the font</span>
+<Sandbox /></div><br/><br/>
+
+<span class="content-2">The glyph set</span>
+<img src="/imgs/glyphs.png"/><br/><br/>
+
 <span class="content">image gallery</span>
 </div>
 
@@ -29,6 +62,10 @@
   font-display: swap;
 }
 
+.sub{
+  font-style: italic;
+}
+
 .header {
   margin: auto;
   position: relative;
@@ -37,13 +74,30 @@
   max-width: 600px;
 }
 
+.sandbox{
+	display: block;
+	height: auto;
+
+}
 
 .content {
   margin: auto;
   position: relative;
-  height: 200px;
+  /* height: 200px; */
   width: 90%;
   max-width: 600px;
+}
+
+.content-2{
+	font-size: 42px;
+}
+
+.content-3{
+	font-size: 32px;
+  color: red;
+  text-align: right;
+  width: 100%;
+  float: right;
 }
 .gallery {
   margin: auto;
@@ -65,7 +119,7 @@
 span {
   font-family: 'Mr Fruit', sans-serif;
   font-size: 48px;
-  position: absolute;
+  /* position: absolute; */
 }
 
 p{
@@ -92,6 +146,7 @@ p{
 .bottom {
   bottom: 0;
   right: 0;
+  position: absolute;
   color: #df1b0d;
 }
 

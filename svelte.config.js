@@ -1,4 +1,4 @@
-import adapterStatic from "@sveltejs/adapter-static";
+import adapter from '@sveltejs/adapter-vercel';
 import { sveltePreprocess } from "svelte-preprocess";
 import autoprefixer from "autoprefixer";
 
@@ -14,7 +14,7 @@ const config = {
 	},
 	preprocess,
 	kit: {
-		adapter: adapterStatic({ strict: false })
+    adapter: adapter()
 	}
 };
 
