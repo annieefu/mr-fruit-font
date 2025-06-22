@@ -131,6 +131,7 @@ p{
 .top {
   top: 0;
   left: 0;
+  display: block;
   color: #df1b0d;
 }
 
@@ -141,6 +142,7 @@ p{
   font-size: 90px;
   text-align: center;
   white-space: nowrap;
+  position: absolute;
 }
 
 .bottom {
