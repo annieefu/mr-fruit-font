@@ -4,15 +4,19 @@
   // Download as PNG image using html2canvas
   import html2canvas from 'html2canvas';
   let previewEl;
-
   async function downloadImage() {
-    const canvas = await html2canvas(previewEl, { backgroundColor: '#fff' });
-    const url = canvas.toDataURL('image/png');
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'message.png';
-    a.click();
-  }
+  const canvas = await html2canvas(previewEl, { backgroundColor: '#fff' });
+  canvas.toBlob((blob) => {
+    if (!blob) return;
+
+    const url = URL.createObjectURL(blob);
+    window.open(url, '_blank');
+
+    // Optionally revoke object URL after some time to free memory
+    setTimeout(() => URL.revokeObjectURL(url), 10000);
+  }, 'image/jpeg');
+}
+
 </script>
 
 <style>
