@@ -4,18 +4,54 @@
   // Download as PNG image using html2canvas
   import html2canvas from 'html2canvas';
   let previewEl;
-  async function downloadImage() {
-  const canvas = await html2canvas(previewEl, { backgroundColor: '#fff' });
-  canvas.toBlob((blob) => {
-    if (!blob) return;
 
-    const url = URL.createObjectURL(blob);
-    window.open(url, '_blank');
 
-    // Optionally revoke object URL after some time to free memory
-    setTimeout(() => URL.revokeObjectURL(url), 10000);
-  }, 'image/jpeg');
+function isMobile() {
+  return /Mobi|Android/i.test(navigator.userAgent);
 }
+
+async function downloadOrShowImage() {
+  const canvas = await html2canvas(previewEl, { backgroundColor: '#fff' });
+  
+  if (isMobile()) {
+    // Show image in modal on mobile
+    const url = canvas.toDataURL('image/jpeg');
+    
+    const img = document.createElement('img');
+    img.src = url;
+    img.style.width = '100%';
+    img.style.height = 'auto';
+
+    const modal = document.createElement('div');
+    Object.assign(modal.style, {
+      position: 'fixed',
+      top: 0, left: 0, right: 0, bottom: 0,
+      backgroundColor: 'rgba(0,0,0,0.8)',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 9999,
+    });
+    modal.appendChild(img);
+
+    modal.addEventListener('click', () => {
+      document.body.removeChild(modal);
+    });
+
+    document.body.appendChild(modal);
+
+  } else {
+    // On desktop: open in new tab using blob URL
+    canvas.toBlob((blob) => {
+      if (!blob) return;
+
+      const url = URL.createObjectURL(blob);
+      window.open(url, '_blank');
+      setTimeout(() => URL.revokeObjectURL(url), 10000);
+    }, 'image/jpeg');
+  }
+}
+
 
 </script>
 
@@ -74,4 +110,4 @@
   {text}
 </div> -->
 
-<button on:click={downloadImage}>Download as image</button>
+<button on:click={downloadOrShowImage}>Download as image</button>
