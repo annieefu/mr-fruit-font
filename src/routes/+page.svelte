@@ -154,7 +154,7 @@ p{
 @media (max-width: 600px) {
   .header {
     width: 100%;
-    height: 220px; /* Optional: adjust if space is tight */
+    height: 150px; /* Optional: adjust if space is tight */
   }
 
   .middle {
@@ -164,6 +164,14 @@ p{
   .top,
   .bottom {
     font-size: 6vw;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .header {
+    width: 100%;
+    height: 120px; /* Optional: adjust if space is tight */
   }
 }
 </style>
