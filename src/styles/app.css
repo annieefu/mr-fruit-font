@@ -3,6 +3,11 @@
 @import "font.css";
 @import "reset.css";
 
+
+body{
+	background-color: #E3DA2C;
+}
+
 /* colors defined in variables.css */
 :root {
 	/* font */
@@ -53,9 +58,6 @@
 	}
 }
 
-h1 {
-	font-size: var(--48px, 48px);
-}
 
 h2 {
 	font-size: var(--36px, 36px);
