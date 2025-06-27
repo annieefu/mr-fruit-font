@@ -1,9 +1,9 @@
 <script>
 	let {
 		title = "The Mr. Fruit Font",
-		description = "Description TK",
-		url = "",
-		keywords = "",
+		description = "A font paying homage to Brookly's Mr. Fruit bodegas.",
+		url = "https://mr-fruit-font.vercel.app",
+		keywords = "font, Mr. Fruit, brooklyn, bodega, typeface, typography, Annie Fu",
 		preloadFont = []
 	} = $props();
 </script>
@@ -15,7 +15,7 @@
 	<meta name="news_keywords" content={keywords} />
 
 	<meta property="og:title" content={title} />
-	<meta property="og:site_name" content="Mr. Fruit Font" />
+	<meta property="og:site_name" content="The Mr. Fruit Font" />
 	<meta property="og:url" content={url} />
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content="article" />
