@@ -2,7 +2,7 @@
 	import Sandbox from "$components/Sandbox.svelte";
 	let {
 		title = "The Mr. Fruit Font",
-		description = "A font paying homage to Brookly's Mr. Fruit bodegas.",
+		description = "A font paying homage to Brooklyn's Mr. Fruit bodegas.",
 		url = "https://mr-fruit-font.vercel.app",
 		keywords = "font, Mr. Fruit, brooklyn, bodega, typeface, typography, Annie Fu",
 		preloadFont = []
